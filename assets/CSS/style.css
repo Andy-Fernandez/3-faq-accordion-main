@@ -1,3 +1,122 @@
-/* <!-- Feel free to remove these styles or customise in your own stylesheet 👍 --> */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+}
+
+/* Body styling */
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  background: url(../images/background-pattern-desktop.svg) no-repeat top fixed;
+  background-color: var(--light-pink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* FAQ Card */
+.faq-card {
+  background-color: hsl(0, 0%, 100%); /* White background */
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 540px;
+  width: 100%;
+  padding: 30px;
+}
+
+/* FAQ Header */
+.faq-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.faq-header h1 {
+  font-weight: 700;
+  font-size: 24px;
+  color: hsl(292, 42%, 14%);
+}
+
+.faq-header img {
+  width: 24px;
+  height: 24px;
+}
+
+/* FAQ Question */
+.faq-question {
+  margin-bottom: 20px;
+}
+
+.faq-question h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: hsl(292, 42%, 14%); /* Dark purple */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-question p {
+  font-size: 16px;
+  color: hsl(292, 16%, 49%); /* Grayish purple */
+  line-height: 1.5;
+  display: none;
+  margin-top: 10px;
+}
+
+.faq-question button {
+  background: none;
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.faq-question button img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Active/Expanded FAQ */
+.faq-question[aria-expanded="true"] p {
+  display: block;
+}
+
+.faq-question[aria-expanded="true"] h2 {
+  font-weight: 700; /* Bold when expanded */
+}
+
+.faq-question[aria-expanded="true"] img {
+  content: url('./assets/images/icon-minus.svg');
+}
+
+/* Responsive Styling */
+@media (max-width: 375px) {
+  .faq-card {
+    padding: 20px;
+    max-width: 100%;
+  }
+}
+
+
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
