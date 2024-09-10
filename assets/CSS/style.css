@@ -11,6 +11,28 @@
   --dark-purple: hsl(292, 42%, 14%);
 }
 
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/assets/fonts/static/WorkSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/assets/fonts/static/WorkSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/assets/fonts/static/WorkSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 /* Body styling */
 body {
   font-family: 'Work Sans', sans-serif;
@@ -26,7 +48,7 @@ body {
 
 /* FAQ Card */
 .faq-card {
-  background-color: hsl(0, 0%, 100%); /* White background */
+  background-color: var(--white); /* White background */
   border-radius: 12px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   max-width: 540px;
@@ -39,18 +61,20 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .faq-header h1 {
   font-weight: 700;
-  font-size: 24px;
-  color: hsl(292, 42%, 14%);
+  font-size: 48px;
+  color: var(--dark-purple);
+  margin: 20px 0;
 }
 
 .faq-header img {
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }
 
 /* FAQ Question */
@@ -61,7 +85,7 @@ body {
 .faq-question h2 {
   font-size: 18px;
   font-weight: 600;
-  color: hsl(292, 42%, 14%); /* Dark purple */
+  color: var(--dark-purple);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,7 +94,7 @@ body {
 
 .faq-question p {
   font-size: 16px;
-  color: hsl(292, 16%, 49%); /* Grayish purple */
+  color: var(--grayish-purple);
   line-height: 1.5;
   display: none;
   margin-top: 10px;
@@ -91,8 +115,8 @@ body {
 }
 
 .faq-question button img {
-  width: 16px;
-  height: 16px;
+  width: 32px;
+  height: 32px;
 }
 
 /* Active/Expanded FAQ */
